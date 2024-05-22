@@ -2,6 +2,7 @@
 USERNAME & PASSWORD
 ==================================
 username	: admin	
+email   	: admin@admin.com	
 password	: admin
 
 ==================================
