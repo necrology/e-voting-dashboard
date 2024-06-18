@@ -295,13 +295,11 @@
   <script src="<?php echo base_url() . 'assets/plugins/slimScroll/jquery.slimscroll.min.js' ?>"></script>
   <!-- ChartJS 1.0.1 -->
   <script src="<?php echo base_url() . 'assets/plugins/chartjs/Chart.min.js' ?>"></script>
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="<?php echo base_url() . 'assets/dist/js/pages/dashboard2.js' ?>"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="<?php echo base_url() . 'assets/dist/js/demo.js' ?>"></script>
   <script src="<?php echo base_url() . 'assets/bootstrap/js/Chart.js' ?>"></script>
   <?php
-  $koneksi     = mysqli_connect("localhost", "root", "", "db_e-voting");
+  $koneksi     = mysqli_connect($this->db->hostname, $this->db->username, $this->db->password, $this->db->database);
   $calon1       = mysqli_query($koneksi, "SELECT hasil_pemilihan_calon FROM tbl_hasil_pemilihan where hasil_pemilihan_rt = 1");
   $suara1       = mysqli_query($koneksi, "SELECT hasil_pemilihan_suara FROM tbl_hasil_pemilihan where hasil_pemilihan_rt = 1");
   $calon2       = mysqli_query($koneksi, "SELECT hasil_pemilihan_calon FROM tbl_hasil_pemilihan where hasil_pemilihan_rt = 2");
